@@ -23,10 +23,17 @@ class CoffeeModel: ObservableObject { // Can be called CoffeeManager
         orders = try await webservice.getOrders()
     }
     
-    /// Place and add new order the view
+    /// Place and add new order to the view
     ///
     func placeOrder(_ order: Order) async throws {
         let newOrder = try await webservice.placeOrder(order)
         orders.append(newOrder)
+    }
+    
+    /// Delete and remove an order from the view
+    ///
+    func deleteOrder(by id: Int) async throws {
+        let deletedOrder = try await webservice.deleteOrder(id: id)
+        orders = orders.filter { $0.id != deletedOrder.id }
     }
 }

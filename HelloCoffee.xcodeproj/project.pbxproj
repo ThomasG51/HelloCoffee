@@ -23,6 +23,7 @@
 		7E977E192934F43700431F22 /* String+isNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E182934F43700431F22 /* String+isNumeric.swift */; };
 		7E977E1B2934F47C00431F22 /* String+isLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E1A2934F47C00431F22 /* String+isLessThan.swift */; };
 		7E977E1D2934FB2800431F22 /* WhenAddingANewCoffeeOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E1C2934FB2800431F22 /* WhenAddingANewCoffeeOrderTests.swift */; };
+		7E977E212935168300431F22 /* WhenDeletingAnOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E202935168300431F22 /* WhenDeletingAnOrderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		7E977E182934F43700431F22 /* String+isNumeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isNumeric.swift"; sourceTree = "<group>"; };
 		7E977E1A2934F47C00431F22 /* String+isLessThan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isLessThan.swift"; sourceTree = "<group>"; };
 		7E977E1C2934FB2800431F22 /* WhenAddingANewCoffeeOrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenAddingANewCoffeeOrderTests.swift; sourceTree = "<group>"; };
+		7E977E202935168300431F22 /* WhenDeletingAnOrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenDeletingAnOrderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			children = (
 				7E977E092934D31B00431F22 /* WhenAppIsLaunchedWithNoOrdersTests.swift */,
 				7E977E1C2934FB2800431F22 /* WhenAddingANewCoffeeOrderTests.swift */,
+				7E977E202935168300431F22 /* WhenDeletingAnOrderTests.swift */,
 			);
 			path = HelloCoffeeEndToEndTests;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E977E212935168300431F22 /* WhenDeletingAnOrderTests.swift in Sources */,
 				7E977E1D2934FB2800431F22 /* WhenAddingANewCoffeeOrderTests.swift in Sources */,
 				7E977E0A2934D31B00431F22 /* WhenAppIsLaunchedWithNoOrdersTests.swift in Sources */,
 			);

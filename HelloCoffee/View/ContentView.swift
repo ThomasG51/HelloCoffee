@@ -25,8 +25,11 @@ struct ContentView: View {
                     Text("No orders available!")
                         .accessibilityIdentifier("noOrderText")
                 } else {
-                    List(model.orders) { order in
-                        OrderCellView(order: order)
+                    List {
+                        ForEach(model.orders) { order in
+                            OrderCellView(order: order)
+                        }
+                        .onDelete(perform: removeOrder)
                     }
                 }
             }
@@ -54,6 +57,20 @@ struct ContentView: View {
             try await model.populateOrders()
         } catch {
             print(error)
+        }
+    }
+
+    private func removeOrder(_ indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let order = model.orders[index]
+            guard let id = order.id else { return }
+            Task {
+                do {
+                    try await model.deleteOrder(by: id)
+                } catch {
+                    print(error)
+                }
+            }
         }
     }
 }
