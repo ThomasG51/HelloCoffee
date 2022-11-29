@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E038F712936500C00F3CF6F /* WhenUpdatingAnExistingOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E038F702936500C00F3CF6F /* WhenUpdatingAnExistingOrderTests.swift */; };
 		7E977DE12934BBEC00431F22 /* HelloCoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977DE02934BBEC00431F22 /* HelloCoffeeApp.swift */; };
 		7E977DE32934BBEC00431F22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977DE22934BBEC00431F22 /* ContentView.swift */; };
 		7E977DE52934BBED00431F22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E977DE42934BBED00431F22 /* Assets.xcassets */; };
@@ -18,12 +19,13 @@
 		7E977DFF2934CAAE00431F22 /* OrderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977DFE2934CAAE00431F22 /* OrderCellView.swift */; };
 		7E977E022934CBCA00431F22 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E012934CBCA00431F22 /* Configuration.swift */; };
 		7E977E0A2934D31B00431F22 /* WhenAppIsLaunchedWithNoOrdersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E092934D31B00431F22 /* WhenAppIsLaunchedWithNoOrdersTests.swift */; };
-		7E977E152934ED9000431F22 /* AddCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E142934ED9000431F22 /* AddCoffeeView.swift */; };
+		7E977E152934ED9000431F22 /* HandleOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E142934ED9000431F22 /* HandleOrderView.swift */; };
 		7E977E172934F0E200431F22 /* View+CenterHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E162934F0E200431F22 /* View+CenterHorizontal.swift */; };
 		7E977E192934F43700431F22 /* String+isNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E182934F43700431F22 /* String+isNumeric.swift */; };
 		7E977E1B2934F47C00431F22 /* String+isLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E1A2934F47C00431F22 /* String+isLessThan.swift */; };
 		7E977E1D2934FB2800431F22 /* WhenAddingANewCoffeeOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E1C2934FB2800431F22 /* WhenAddingANewCoffeeOrderTests.swift */; };
 		7E977E212935168300431F22 /* WhenDeletingAnOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E202935168300431F22 /* WhenDeletingAnOrderTests.swift */; };
+		7E977E592936424800431F22 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E977E582936424800431F22 /* OrderDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E038F702936500C00F3CF6F /* WhenUpdatingAnExistingOrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenUpdatingAnExistingOrderTests.swift; sourceTree = "<group>"; };
 		7E977DDD2934BBEC00431F22 /* HelloCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E977DE02934BBEC00431F22 /* HelloCoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloCoffeeApp.swift; sourceTree = "<group>"; };
 		7E977DE22934BBEC00431F22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,12 +53,13 @@
 		7E977E012934CBCA00431F22 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		7E977E072934D31B00431F22 /* HelloCoffeeEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloCoffeeEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E977E092934D31B00431F22 /* WhenAppIsLaunchedWithNoOrdersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenAppIsLaunchedWithNoOrdersTests.swift; sourceTree = "<group>"; };
-		7E977E142934ED9000431F22 /* AddCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeView.swift; sourceTree = "<group>"; };
+		7E977E142934ED9000431F22 /* HandleOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleOrderView.swift; sourceTree = "<group>"; };
 		7E977E162934F0E200431F22 /* View+CenterHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CenterHorizontal.swift"; sourceTree = "<group>"; };
 		7E977E182934F43700431F22 /* String+isNumeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isNumeric.swift"; sourceTree = "<group>"; };
 		7E977E1A2934F47C00431F22 /* String+isLessThan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isLessThan.swift"; sourceTree = "<group>"; };
 		7E977E1C2934FB2800431F22 /* WhenAddingANewCoffeeOrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenAddingANewCoffeeOrderTests.swift; sourceTree = "<group>"; };
 		7E977E202935168300431F22 /* WhenDeletingAnOrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenDeletingAnOrderTests.swift; sourceTree = "<group>"; };
+		7E977E582936424800431F22 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				7E977DFE2934CAAE00431F22 /* OrderCellView.swift */,
-				7E977E142934ED9000431F22 /* AddCoffeeView.swift */,
+				7E977E142934ED9000431F22 /* HandleOrderView.swift */,
+				7E977E582936424800431F22 /* OrderDetailView.swift */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				7E977E092934D31B00431F22 /* WhenAppIsLaunchedWithNoOrdersTests.swift */,
 				7E977E1C2934FB2800431F22 /* WhenAddingANewCoffeeOrderTests.swift */,
 				7E977E202935168300431F22 /* WhenDeletingAnOrderTests.swift */,
+				7E038F702936500C00F3CF6F /* WhenUpdatingAnExistingOrderTests.swift */,
 			);
 			path = HelloCoffeeEndToEndTests;
 			sourceTree = "<group>";
@@ -293,9 +299,10 @@
 				7E977DFF2934CAAE00431F22 /* OrderCellView.swift in Sources */,
 				7E977DF62934C01A00431F22 /* CoffeeModel.swift in Sources */,
 				7E977DFB2934C8F100431F22 /* NumberFormatter+Currency.swift in Sources */,
-				7E977E152934ED9000431F22 /* AddCoffeeView.swift in Sources */,
+				7E977E152934ED9000431F22 /* HandleOrderView.swift in Sources */,
 				7E977DE12934BBEC00431F22 /* HelloCoffeeApp.swift in Sources */,
 				7E977E1B2934F47C00431F22 /* String+isLessThan.swift in Sources */,
+				7E977E592936424800431F22 /* OrderDetailView.swift in Sources */,
 				7E977E192934F43700431F22 /* String+isNumeric.swift in Sources */,
 				7E977E022934CBCA00431F22 /* Configuration.swift in Sources */,
 				7E977DF32934BCA600431F22 /* Order.swift in Sources */,
@@ -308,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E038F712936500C00F3CF6F /* WhenUpdatingAnExistingOrderTests.swift in Sources */,
 				7E977E212935168300431F22 /* WhenDeletingAnOrderTests.swift in Sources */,
 				7E977E1D2934FB2800431F22 /* WhenAddingANewCoffeeOrderTests.swift in Sources */,
 				7E977E0A2934D31B00431F22 /* WhenAppIsLaunchedWithNoOrdersTests.swift in Sources */,

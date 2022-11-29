@@ -27,14 +27,21 @@ struct ContentView: View {
                 } else {
                     List {
                         ForEach(model.orders) { order in
-                            OrderCellView(order: order)
+                            NavigationLink(value: order.id) {
+                                OrderCellView(order: order)
+                            }
+                            .accessibilityIdentifier("orderNavigationLink")
                         }
                         .onDelete(perform: removeOrder)
                     }
+                    .accessibilityIdentifier("orderList")
                 }
             }
             .task {
                 await getOrders()
+            }
+            .navigationDestination(for: Int.self) { orderId in
+                OrderDetailView(id: orderId)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -45,7 +52,7 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $isSheetPresented) {
-                AddCoffeeView()
+                HandleOrderView()
             }
         }
     }

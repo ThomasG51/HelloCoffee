@@ -11,12 +11,14 @@ enum NetworkError: Error {
     case badUrl
     case badRequest
     case decodingError
+    case invalidOrderId
 }
 
 enum Endpoints {
     case allOrders
     case placeOrder
     case deleteOrder(Int)
+    case updateOrder(Int)
 }
 
 extension Endpoints {
@@ -27,6 +29,8 @@ extension Endpoints {
         case .placeOrder:
             return "test/new-order"
         case .deleteOrder(let id):
+            return "test/orders/\(id)"
+        case .updateOrder(let id):
             return "test/orders/\(id)"
         }
     }
@@ -117,4 +121,36 @@ class Webservice {
 
         return order
     }
+
+    /// Update a coffee order
+    ///
+    /// - parameters id: The id of order that should be updated to the server
+    ///
+    func updateOrder(_ order: Order) async throws -> Order {
+        guard let id = order.id else {
+            throw NetworkError.invalidOrderId
+        }
+
+        guard let url = URL(string: Endpoints.updateOrder(id).path, relativeTo: baseURL) else {
+            throw NetworkError.badUrl
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONEncoder().encode(order)
+
+        let (data, response) = try await URLSession.shared.data(for: request)
+
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw NetworkError.badRequest
+        }
+
+        guard let order = try? JSONDecoder().decode(Order.self, from: data) else {
+            throw NetworkError.decodingError
+        }
+
+        return order
+    }
 }
+
